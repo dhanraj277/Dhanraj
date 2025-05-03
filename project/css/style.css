@@ -1,0 +1,453 @@
+:root {
+    --primary: #fea116;
+    --light: #f1f8ff;
+    --dark: #0f172b;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Heebo", sans-serif;
+    background-color: #fff;
+    color: var(--dark);
+  }
+  
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Buttons */
+  .btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary);
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #d98b0c;
+  }
+  
+  .btn-light {
+    background-color: #f8f9fa;
+    color: var(--dark);
+  }
+  
+  .btn-light:hover {
+    background-color: #e2e6ea;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  
+  .section-title::before,
+  .section-title::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background: var(--primary);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .section-title::before {
+    left: -55px;
+  }
+  
+  .section-title::after {
+    right: -55px;
+  }
+  
+  .section-title.text-start::before,
+  .section-title.text-end::after {
+    display: none;
+  }
+  
+  /* Header Section (Carousel) */
+  .carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 43, 0.7);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .carousel-caption h6 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  /* Booking Section */
+  .booking {
+    position: relative;
+    margin-top: -100px;
+    z-index: 1;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .booking .form-select,
+  .booking .form-control {
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  /* About Section */
+  .container-xxl .about {
+    padding: 50px 15px;
+    background-color: var(--light);
+  }
+  
+  .about img {
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  
+  .about img:hover {
+    transform: scale(1.05);
+  }
+  
+  .about .btn-primary {
+    margin-top: 20px;
+  }
+  
+  /* Room Cards */
+  .rooms-item {
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 10px;
+    background: #fff;
+  }
+  
+  .rooms-item img {
+    border-bottom: 5px solid var(--primary);
+    transition: 0.5s;
+  }
+  
+  .rooms-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .rooms-item .p-4 {
+    padding: 20px;
+  }
+  
+  .rooms-item h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark);
+  }
+  
+  .rooms-item .fa-star {
+    color: var(--primary);
+  }
+  
+  /* Testimonials Section  */
+  #testimonials {
+    background-color: #f9f9f9;
+    padding: 50px 15px;
+    border-radius: 10px;
+  }
+  
+  .testimonial-carousel .testimonial-item {
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .testimonial-carousel .testimonial-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .testimonial-item img {
+    border: 2px solid var(--primary);
+  }
+  
+  .testimonial-item h6 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark);
+  }
+  
+  .testimonial-item small {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+  }
+  
+  .testimonial-item p {
+    color: #555;
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+  
+  /* Contact Section */
+  #contact {
+    background-color: #f9f9f9;
+    padding: 50px 15px;
+    border-radius: 10px;
+  }
+  
+  #contact .form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  #contact .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(254, 161, 22, 0.5);
+  }
+  
+  #contact textarea {
+    resize: none;
+  }
+  
+  #contact .btn-primary {
+    background-color: var(--primary);
+    border: none;
+    font-size: 1rem;
+    transition: all 0.3s;
+  }
+  
+  #contact .btn-primary:hover {
+    background-color: #d98b0c;
+    transform: scale(1.05);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--dark);
+    color: #fff;
+    padding: 30px 0;
+  }
+  
+  footer a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: #fff;
+  }
+  
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    /* General Styles */
+    body {
+      font-size: 14px;
+    }
+  
+    .navbar {
+      padding: 10px 15px;
+    }
+  
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+  
+    .navbar-nav {
+      text-align: center;
+    }
+  
+    .carousel-caption h1 {
+      font-size: 1.8rem;
+    }
+  
+    .carousel-caption h6 {
+      font-size: 0.9rem;
+    }
+  
+    /* Booking Section */
+    .booking {
+      margin-top: 0;
+      padding: 15px;
+    }
+  
+    .booking .row {
+      flex-wrap: wrap;
+    }
+  
+    .booking .col-md-10, .booking .col-md-2 {
+      width: 100%;
+    }
+  
+    .booking .col-md-10 .row .col-md-3 {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    /* About Section */
+    .about img {
+      width: 100%;
+    }
+  
+    .about h1 {
+      font-size: 1.5rem;
+    }
+  
+    /* Room Cards */
+    .rooms-item h5 {
+      font-size: 1rem;
+    }
+  
+    .rooms-item .p-4 {
+      padding: 10px;
+    }
+  
+    /* Testimonials Section */
+    #testimonials {
+      padding: 20px 15px;
+    }
+  
+    .testimonial-item {
+      margin-bottom: 20px;
+    }
+  
+    .testimonial-item img {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .testimonial-item h6 {
+      font-size: 1rem;
+    }
+  
+    .testimonial-item p {
+      font-size: 0.85rem;
+    }
+  
+    /* Contact Section */
+    #contact .form-control, #contact textarea {
+      font-size: 0.9rem;
+    }
+  
+    #contact .btn-primary {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  
+    /* Footer */
+    footer {
+      text-align: center;
+    }
+  
+    footer a {
+      display: inline-block;
+      margin: 5px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* Header Carousel */
+    .carousel-caption {
+      padding: 10px;
+    }
+  
+    .carousel-caption h1 {
+      font-size: 1.5rem;
+    }
+  
+    .carousel-caption h6 {
+      font-size: 0.8rem;
+    }
+  
+    /* Booking Section */
+    .booking {
+      padding: 10px;
+    }
+  
+    /* Room Cards */
+    .rooms-item img {
+      height: auto;
+    }
+  
+    /* Testimonials */
+    .testimonial-item img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .testimonial-item h6 {
+      font-size: 0.9rem;
+    }
+  
+    .testimonial-item p {
+      font-size: 0.8rem;
+    }
+  
+    /* Contact Section */
+    #contact h1 {
+      font-size: 1.2rem;
+    }
+  
+    #contact .btn-primary {
+      padding: 10px;
+    }
+  
+    /* Footer */
+    footer p {
+      font-size: 0.85rem;
+    }
+  }
+#roomBtn{
+  background-color: #0f172b;
+}
